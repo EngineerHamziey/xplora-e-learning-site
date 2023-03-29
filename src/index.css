@@ -1,13 +1,1 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:sans-serif;margin-bottom:10rem}.nav__home-logo-wrap{display:flex;justify-content:center;align-items:center;justify-content:flex-start}.btn{text-decoration:none}.btn--download{background-color:#0C0C0C;color:#fff}.btn--download__content{display:flex}.higlighted{color:#B629E7}h1{font-family:Clash Display;font-size:26px;font-weight:600;line-height:32px;letter-spacing:0em;text-align:left}

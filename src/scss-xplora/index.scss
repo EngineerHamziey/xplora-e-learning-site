@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Global variables
+$primary-purple: #B629E7;
+
+@mixin flex-horizontal-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-vertical-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: sans-serif;
+
+  margin-bottom: 10rem;//for visualization
+}
+
+.nav {
+
+  &__home-logo-wrap {
+    // display: flex;
+    @include flex-horizontal-center();
+    justify-content: flex-start;//to correct the justify
+  }
+}
+
+.btn {
+  text-decoration: none;
+  
+  &--download {
+    // display: none;
+    background-color: #0C0C0C;
+    color: #fff;
+
+    &__content {
+      display: flex;
+    }
+  }
+}
+
+.higlighted {
+  color: $primary-purple;
+}
+
+h1 {
+  //styleName: H4;
+font-family: Clash Display;
+font-size: 26px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+
+}
