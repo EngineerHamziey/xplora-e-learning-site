@@ -1,9 +1,9 @@
 import EachFeature from "./EachFeature";
 
-import barGraphLogo from "./imagesHome/barGraphLogo.png"
-import purpleTwitter from "./imagesHome/purpleTwitter.png"
-import greenCircleLogo from "./imagesHome/greenCircleLogo.png"
-import alarmLogo from "./imagesHome/alarmLogo.png"
+import barGraphLogo from "../imagesHome/barGraphLogo.png"
+import purpleTwitter from "../imagesHome/purpleTwitter.png"
+import greenCircleLogo from "../imagesHome/greenCircleLogo.png"
+import alarmLogo from "../imagesHome/alarmLogo.png"
 
 import React from 'react'
 

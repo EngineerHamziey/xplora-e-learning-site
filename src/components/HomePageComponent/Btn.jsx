@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Btn = ({ text, type, link }) => {
   return (

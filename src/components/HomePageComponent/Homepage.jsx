@@ -1,7 +1,7 @@
 import Nav from "./NavComponent/Nav"
 import Btn from "./Btn"
 import Courses from "./Courses"
-import Features from "./Features"
+import Features from "./FeaturesComponent/Features"
 import Reviews from "./reviewComponent/Reviews"
 import Footer from "./FooterComponent/Footer"
 

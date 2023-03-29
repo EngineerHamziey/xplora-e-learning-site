@@ -1,11 +1,12 @@
 import NavLinks from "./otherNavComponents/NavLinks"
 import HomeLogo from "./otherNavComponents/HomeLogo"
 
+
 import hamburger from "../imagesHome/hamburger.png"
 
 const Nav = () => {
   return (
-    <nav className="nav">
+    <nav id="top" className="nav">
       <HomeLogo />
       <div className="user">
         <img src="/" alt="" />
