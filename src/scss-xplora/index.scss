@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // overflow-x: hidden;
 }
 
 // Global variables
 $primary-purple: #B629E7;
+$link-font-size: 0.875rem;//14px
 
 @mixin flex-horizontal-center{
   display: flex;
@@ -22,21 +24,127 @@ $primary-purple: #B629E7;
 
 body {
   font-family: sans-serif;
-
+  // font-size: $link-font-size;
   margin-bottom: 10rem;//for visualization
 }
 
+nav,
+body,
+.universal-wrapper,
+.root {
+  overflow-x: hidden;
+  // position: relative;
+  // width: 100%;
+}
+
 .nav {
+  background-color: rgba(240, 220, 220, 0.5);
+  display: flex;
 
   &__home-logo-wrap {
     // display: flex;
     @include flex-horizontal-center();
     justify-content: flex-start;//to correct the justify
   }
+
+  //the hamburger menu btn
+  &__btn {
+    border: none;
+    background-color: transparent;
+    // background-color: pink;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    z-index: 3;
+    width: 2.75rem;
+    height: 2.75rem;
+    @include flex-vertical-center()
+  }
+
+  // the divs that makes the hamburgers
+  &__hamburgers {
+    background-color: #0C0C0C;
+    
+    width: 2rem;
+    height: 0.15rem;
+    height: 0.23rem;
+
+    // border-radius: .1rem; //not in the design given
+    margin: 0;
+    transition: all 500ms ease-in-out, color 10s ease-in-out;
+    transform: 0;
+
+    &--top {
+      // margin-bottom: 0.1rem;
+
+      &.menu-opened {
+        transform: rotate(-100deg) translateY(-63px);
+        color: red;
+        opacity: 0;
+      }
+    }
+
+    &--middle{
+      margin: 0.3rem auto;
+
+      &.menu-opened {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--bottom {
+      // margin-top: 0.1rem;
+
+      &.menu-opened {
+        transform: rotate(45deg) translate(-0.3rem, -0.4rem);
+      }
+    }
+  }
+
+  //nav__link
+  &__link {
+    // display: flex;
+    // @include flex-vertical-center();
+    background-color: rgb(13, 175, 175);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 65%;
+    pointer-events: none;
+    visibility: hidden;
+    clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%);
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%);
+    transition: all 0.5s ease-in-out;
+
+    &.menu-opened {
+      opacity: 1;
+      clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+      -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    //the link btns
+    &--links {
+      list-style-type: none;
+    }
+
+  }
 }
 
 .btn {
   text-decoration: none;
+
+  &--nav-link {
+    font-size: $link-font-size;//14px
+    font-weight: 400;
+    line-height: 1.225;
+    color: #0C0C0C;
+    transform: translate(60vw) rotate(-100deg) scale(4);
+    display: inline-block;
+    // transform: scale(1.4) rotate(100deg) translate(0.3rem, 0.2rem);
+  }
   
   &--download {
     // display: none;
@@ -62,4 +170,9 @@ line-height: 32px;
 letter-spacing: 0em;
 text-align: left;
 
+}
+
+
+@media screen and (min-width: 700pz) {
+  
 }

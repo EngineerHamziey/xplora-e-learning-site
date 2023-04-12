@@ -1,10 +1,7 @@
 
-const Btn = ({ text, type, link }) => {
+const Btn = ({ text, link }) => {
   return (
-    <div className="btn-wrap">
-      {(type === "link") ? <a href={link} className='btn'>{text}</a> : <button className='btn'>{text}</button>}
-    </div>
-    
+    <a href={link} className='btn'>{text}</a>    
   )
 }
 
