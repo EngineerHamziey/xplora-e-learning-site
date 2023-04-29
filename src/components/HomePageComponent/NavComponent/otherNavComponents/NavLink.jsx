@@ -1,9 +1,12 @@
 
 
 const NavLink = ({ link, text, menuState }) => {
+
+  const btnClassList = menuState ? "btn btn--nav-link menu-opened" : "btn btn--nav-link";
+  
   return (
     <li className="nav__link--links">
-      <a href={link} className={"btn btn--nav-link " + menuState && "menu-opened"} >
+      <a href={link} className={btnClassList} >
         {text}
       </a>
     </li>

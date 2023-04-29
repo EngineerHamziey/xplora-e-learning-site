@@ -1,13 +1,18 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
+  font-family: sans-serif;
+  // display: none;
 }
 
 // Global variables
 $primary-purple: #B629E7;
+$light-purple: #F9EAFE;
 $link-font-size: 0.875rem;//14px
+$oc-black: #0C0C0C;
 
 @mixin flex-horizontal-center{
   display: flex;
@@ -22,31 +27,53 @@ $link-font-size: 0.875rem;//14px
   align-items: center;
 }
 
-body {
-  font-family: sans-serif;
-  // font-size: $link-font-size;
-  margin-bottom: 10rem;//for visualization
+.text-center {
+  text-align: center;
 }
 
-nav,
-body,
-.universal-wrapper,
-.root {
-  overflow-x: hidden;
-  // position: relative;
-  // width: 100%;
+body {
+  // font-size: $link-font-size;
+  margin-bottom: 10rem;//for visualization
+  line-height: 1.5;
+  font-size: 0.9375;//15px
+}
+
+#root {
+  @include flex-vertical-center();
+  width: 100%;
+  // background-color: red;
+}
+
+.App {
+  margin: 0 0.6rem;
+  // max-width: 500px;
+  position: relative;
 }
 
 .nav {
-  background-color: rgba(240, 220, 220, 0.5);
+  // background-color: rgba(240, 220, 220, 0.5);
   display: flex;
+  margin: 0.6rem 0 0 0.6rem;
+  margin: 0.6rem 0 0 0rem;
 
   &__home-logo-wrap {
-    // display: flex;
     @include flex-horizontal-center();
-    justify-content: flex-start;//to correct the justify
+    text-decoration: none;
+    // justify-content: flex-start;//to correct the justify
+    // margin: ;
   }
 
+  &__dot-logo {
+    display: block;
+  }
+
+  &__logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $oc-black;
+    margin-left: 0.4rem;
+  }
+  
   //the hamburger menu btn
   &__btn {
     border: none;
@@ -63,7 +90,7 @@ body,
 
   // the divs that makes the hamburgers
   &__hamburgers {
-    background-color: #0C0C0C;
+    background-color: $oc-black;
     
     width: 2rem;
     height: 0.15rem;
@@ -86,7 +113,7 @@ body,
 
     &--middle{
       margin: 0.3rem auto;
-
+      
       &.menu-opened {
         transform: rotate(-45deg);
       }
@@ -106,7 +133,7 @@ body,
     // display: flex;
     // @include flex-vertical-center();
     background-color: rgb(13, 175, 175);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
@@ -116,7 +143,7 @@ body,
     clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%);
     -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%);
     transition: all 0.5s ease-in-out;
-
+    
     &.menu-opened {
       opacity: 1;
       clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
@@ -132,23 +159,128 @@ body,
 
   }
 }
+// nav ends here
+
+.home {
+
+  &__content-not-nav {
+    // display: none;
+    @include flex-vertical-center();
+
+    &--wrapper {
+      max-width: 95%;
+    }
+  }
+
+  &__heading {
+    
+    &--one {
+      // font-family: Clash Display;
+      margin-top: 3rem;
+      font-size: 2.5rem;
+      // font-size: 22.5rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    &--two {
+      // text-align: center;
+    }
+  }
+
+  &__each-course {
+    // display: flex;
+    @include flex-vertical-center();
+  }
+  
+  &__course-book {
+    display: inline-block;
+    margin: auto;
+  }
+
+  &__btn-and-hero-wrapper {
+    // display: none;
+    width: 90%;
+  }
+
+  &__hero-text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  &__hero-and-arrow {
+    // background-color: red;
+    margin: 0.3rem 0 3.5rem 0;
+    @include flex-vertical-center();
+  }
+
+  &__arrow {
+    // position: absolute;
+    // display: inline-block;
+    margin-left: 5rem;
+    margin-left: 31%;
+
+    &-wrapper {
+      // background-color: red;
+      width: 100%;
+    }
+  }
+
+  &__hero{
+    // c
+  }
+}
 
 .btn {
   text-decoration: none;
+
+  &--hero {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    padding: 0.8rem 0;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: center;
+
+    &-wrapper {
+      display: flex;
+      // display: none;
+      justify-content: space-between;
+      width: 95%;
+    }
+
+    &-start {
+      background-color: $primary-purple;
+      color: white;
+      // display: none;
+    }
+
+    &-learn {
+      color: $primary-purple;
+      background-color: $light-purple;
+    }
+  }
 
   &--nav-link {
     font-size: $link-font-size;//14px
     font-weight: 400;
     line-height: 1.225;
-    color: #0C0C0C;
+    color: $oc-black;
     transform: translate(60vw) rotate(-100deg) scale(4);
-    display: inline-block;
     // transform: scale(1.4) rotate(100deg) translate(0.3rem, 0.2rem);
+    display: inline-block;
+    transition: transform 700ms ease-in-out;
+
+    &.menu-opened {
+      transform: none;
+    }
   }
   
   &--download {
     // display: none;
-    background-color: #0C0C0C;
+    background-color: $oc-black;
     color: #fff;
 
     &__content {
@@ -161,18 +293,7 @@ body,
   color: $primary-purple;
 }
 
-h1 {
-  //styleName: H4;
-font-family: Clash Display;
-font-size: 26px;
-font-weight: 600;
-line-height: 32px;
-letter-spacing: 0em;
-text-align: left;
 
-}
-
-
-@media screen and (min-width: 700pz) {
-  
+@media screen and (min-width: 465px) {
+  // *{display: none;}
 }

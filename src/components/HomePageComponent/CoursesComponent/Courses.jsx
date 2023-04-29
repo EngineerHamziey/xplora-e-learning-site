@@ -1,5 +1,5 @@
 import EachCourse from "./EachCourse"
-import Btn from "./Btn"
+import Btn from "../Btn"
 
 const Courses = () => {
   return (

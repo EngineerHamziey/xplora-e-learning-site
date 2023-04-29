@@ -8,11 +8,11 @@ const NavLinks = ({ menuState }) => {
   return (
     <ul className={navLinkClassName}>
       <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="Home" />
-      <NavLink className="nav__link-anchor-tag" link="#" type="link" text="Library" />
-      <NavLink className="nav__link-anchor-tag" link="#" type="link" text="Commnity" />
-      <NavLink className="nav__link-anchor-tag" link="#" type="link" text="About Us" />
-      <NavLink className="nav__link-anchor-tag" link="#" type="link" text="Login" />
-      <NavLink className="nav__link-anchor-tag" link="#" type="link" text="Sign Up" />
+      <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="Library" />
+      <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="Commnity" />
+      <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="About Us" />
+      <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="Login" />
+      <NavLink menuState={menuState} className="nav__link-anchor-tag" link="#" type="link" text="Sign Up" />
     </ul>
   )
 }

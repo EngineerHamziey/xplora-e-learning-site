@@ -1,6 +1,6 @@
 import Nav from "./NavComponent/Nav"
 import Btn from "./Btn"
-import Courses from "./Courses"
+import Courses from "./CoursesComponent/Courses"
 import Features from "./FeaturesComponent/Features"
 import Reviews from "./reviewComponent/Reviews"
 import Footer from "./FooterComponent/Footer"
@@ -14,22 +14,36 @@ const Homepage = () => {
   return (
     <>
       <Nav />
-      <h1>Learn from the <span className="higlighted">Comfort</span> of Your Home.</h1>
-      <p>An hero text is to be included here which summarizes the function of the products and its advantages to the users.</p>
-      <Btn link="#" type="link" text="Start Learning" />
-      <Btn link="#" type="link" text="Learn More" />
-      <img src={coilPointionArrow} alt="" />
-      <img src={homePageHeroMobile} alt="" />
-      <h2>Browse Our Popular Subjects</h2>
-      <p>
-        A follow-up text giving the user more insights on the courses/subjects offered
-      </p>
-      <Courses />
-      <h4>Learning with others makes it more fun.</h4>
-      <img src={theWholeChart} alt="" />
-      <Features />
-      <Reviews />
-      <Footer />
+      <div className="home__content-not-nav">
+        <div className="home__content-not-nav--wrapper">
+          <h1 className="home__heading--one">Learn from the <span className="higlighted">Comfort</span> of Your Home.</h1>
+          <p className="home__hero-text">
+            Empower your mind with our learning platform. Unlock your potential, gain new skills and explore endless possibilities or personal and professional growth.
+          </p>
+          <div className="home__btn-and-hero-wrapper">
+            <div className="btn--hero-wrapper">
+              <Btn className="btn--hero btn--hero-start" link="#" type="link" text="Start Learning" />
+              <Btn className="btn--hero btn--hero-learn" link="#" type="link" text="Learn More" />
+            </div>
+            <div className="home__hero-and-arrow">
+              <div className="home__arrow-wrapper">
+                <img className="home__arrow" src={coilPointionArrow} alt="" />
+              </div>
+              <img className="home__hero" src={homePageHeroMobile} alt="Picture of a student" />
+            </div>
+          </div>
+          <h2 className="home__heading--two text-center">Browse Our Popular Subjects</h2>
+          <p className="text-center">
+            Master new skills in less time with our condensed approach and Learn from industry leaders.
+          </p>
+          <Courses />
+          <h3 className="home__heading--three text-center">Learning with others makes it more fun.</h3>
+          <img src={theWholeChart} alt="" />
+          <Features />
+          <Reviews />
+          <Footer />
+        </div>
+      </div>
     </>
   )
 }
