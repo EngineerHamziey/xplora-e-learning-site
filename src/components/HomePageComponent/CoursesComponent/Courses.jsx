@@ -3,7 +3,7 @@ import Btn from "../Btn"
 
 const Courses = () => {
   return (
-    <div className='courses'>
+    <div className='home__courses'>
       <EachCourse rating="4.9" courseTitle="Anatomy" />
       <EachCourse rating="4.7" courseTitle="Literature" />
       <EachCourse rating="5.0" courseTitle="Government" />

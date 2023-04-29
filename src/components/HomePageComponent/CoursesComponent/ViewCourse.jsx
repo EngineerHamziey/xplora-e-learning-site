@@ -4,12 +4,12 @@ import yellowStar from "../imagesHome/yellowStar.png"
 
 const ViewCourse = ({ rating }) => {
   return (
-    <div>
-      <div className="rating">
+    <div className="home__rating-view-course">
+      <div className="home__rating">
         <p>{rating}</p>
-        <img src={yellowStar} alt="" />
+        <img className="home__rating-img" src={yellowStar} alt="" />
       </div>
-      <Btn type="link" link="#" text="View Course" />
+      <Btn className="btn__viewcourse" type="link" link="#" text="View Course" />
     </div>
   )
 }

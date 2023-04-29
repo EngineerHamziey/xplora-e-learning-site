@@ -188,17 +188,7 @@ body {
       // text-align: center;
     }
   }
-
-  &__each-course {
-    // display: flex;
-    @include flex-vertical-center();
-  }
   
-  &__course-book {
-    display: inline-block;
-    margin: auto;
-  }
-
   &__btn-and-hero-wrapper {
     // display: none;
     width: 90%;
@@ -219,15 +209,42 @@ body {
     // display: inline-block;
     margin-left: 5rem;
     margin-left: 31%;
-
+    
     &-wrapper {
       // background-color: red;
       width: 100%;
     }
   }
 
-  &__hero{
-    // c
+  &__courses {
+    // margin-top: 3rem;
+  }
+  
+  &__each-course {
+    @include flex-vertical-center();
+    margin-top: 3rem;
+
+    &-heading {
+      margin: 1rem 0;
+    }
+
+    &-paragraph {
+      margin: 0 0 1rem 0;
+    }
+  }
+  
+  &__rating-view-course {
+    display: flex;
+  }
+
+  &__rating {
+    display: flex;
+
+    &-img {
+      display: inline-block;
+      width: 1.1rem;
+      height: 1rem;
+    }
   }
 }
 
