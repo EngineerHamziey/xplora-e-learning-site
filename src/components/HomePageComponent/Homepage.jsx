@@ -22,8 +22,8 @@ const Homepage = () => {
           </p>
           <div className="home__btn-and-hero-wrapper">
             <div className="btn--hero-wrapper">
-              <Btn className="btn--hero btn--hero-start" link="#" type="link" text="Start Learning" />
-              <Btn className="btn--hero btn--hero-learn" link="#" type="link" text="Learn More" />
+              <Btn className="btn--hero btn--purple btn--shadow" link="#" type="link" text="Start Learning" />
+              <Btn className="btn--hero btn--light-purple btn--shadow" link="#" type="link" text="Learn More" />
             </div>
             <div className="home__hero-and-arrow">
               <div className="home__arrow-wrapper">

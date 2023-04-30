@@ -32,6 +32,8 @@ $oc-black: #0C0C0C;
 }
 
 body {
+  background-image: url('./components/images/icons/4doodle4.png');//here goes doodle image
+  background-repeat: repeat;
   // font-size: $link-font-size;
   margin-bottom: 10rem;//for visualization
   line-height: 1.5;
@@ -218,11 +220,19 @@ body {
 
   &__courses {
     // margin-top: 3rem;
+    width: 100%;
+    // background-color: #0C0C0C;
+    @include flex-vertical-center()
   }
   
   &__each-course {
     @include flex-vertical-center();
     margin-top: 3rem;
+    // box-shadow: 0px 30px 44px rgba(200, 200, 200, 0.25);
+    box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.25);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background-color: #ffffff;
 
     &-heading {
       margin: 1rem 0;
@@ -235,10 +245,16 @@ body {
   
   &__rating-view-course {
     display: flex;
+    width: 100%;
   }
 
   &__rating {
     display: flex;
+    align-items: center;
+
+    &-text {
+      margin-right: 0.5rem;
+    }
 
     &-img {
       display: inline-block;
@@ -251,33 +267,8 @@ body {
 .btn {
   text-decoration: none;
 
-  &--hero {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    padding: 0.8rem 0;
+  &--shadow {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    text-align: center;
-
-    &-wrapper {
-      display: flex;
-      // display: none;
-      justify-content: space-between;
-      width: 95%;
-    }
-
-    &-start {
-      background-color: $primary-purple;
-      color: white;
-      // display: none;
-    }
-
-    &-learn {
-      color: $primary-purple;
-      background-color: $light-purple;
-    }
   }
 
   &--nav-link {
@@ -285,7 +276,8 @@ body {
     font-weight: 400;
     line-height: 1.225;
     color: $oc-black;
-    transform: translate(60vw) rotate(-100deg) scale(4);
+    // transform: translate(60vw) rotate(-100deg) scale(4);
+    transform: translate(60vw, 60vh) scale(5);
     // transform: scale(1.4) rotate(100deg) translate(0.3rem, 0.2rem);
     display: inline-block;
     transition: transform 700ms ease-in-out;
@@ -293,6 +285,52 @@ body {
     &.menu-opened {
       transform: none;
     }
+  }
+
+  &--hero {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    padding: 0.8rem 0;
+    width: 45%;
+    text-align: center;
+    
+    &-wrapper {
+      display: flex;
+      // display: none;
+      justify-content: space-between;
+      width: 95%;
+    }
+  }
+  
+  &--purple {
+    background-color: $primary-purple;
+    color: white;
+    // display: none;
+  }
+  
+  &--light-purple {
+    color: $primary-purple;
+    background-color: $light-purple;
+  }
+  
+  &--view-course {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    padding: 0.8rem 1.3rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-left: 3.5rem;
+    place-self: center;
+  }
+
+  &--get-started {
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: 0.6rem;
   }
   
   &--download {
