@@ -1,10 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+
 *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Aeonik, sans-serif;
   // display: none;
 }
 
@@ -20,12 +22,17 @@ $oc-black: #0C0C0C;
   align-items: center;
 }
 
-@mixin flex-vertical-center{
+@mixin flex-vertical-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+// @mixin clash-font-600 {
+//   font-family: 'Clash Display', sans-serif;
+//   font-weight: 600;
+// }
 
 .text-center {
   text-align: center;
@@ -37,7 +44,8 @@ body {
   // font-size: $link-font-size;
   margin-bottom: 10rem;//for visualization
   line-height: 1.5;
-  font-size: 0.9375;//15px
+  font-size: 0.875;//14px
+  color: #757879;
 }
 
 #root {
@@ -175,6 +183,9 @@ body {
   }
 
   &__heading {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    color: $oc-black;
     
     &--one {
       // font-family: Clash Display;
@@ -187,7 +198,23 @@ body {
     }
 
     &--two {
+      font-size: 1.3rem;
+      margin: 0 0 0.4rem 0;
+    }
+
+    &--three {
       // text-align: center;
+      // @include clash-font-600();
+      font-size: 1.125rem;//18px
+      margin: 1rem 0;
+    }
+
+    &--five {
+      text-align: center;
+      // display: none;
+      // font-size: 0.75rem;//12px
+      font-size: 0.8rem;//12.8px
+      font-weight: 400;
     }
   }
   
@@ -198,6 +225,8 @@ body {
 
   &__hero-text {
     margin: 1rem 0 1.5rem 0;
+    font-size: 0.875rem;
+    color: $oc-black;
   }
 
   &__hero-and-arrow {
@@ -227,11 +256,12 @@ body {
   
   &__each-course {
     @include flex-vertical-center();
-    margin-top: 3rem;
+    // margin-top: 3rem;
+    margin: 3rem 0.7rem 0 0.7rem;
     // box-shadow: 0px 30px 44px rgba(200, 200, 200, 0.25);
     box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.25);
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background-color: #ffffff;
 
     &-heading {
@@ -240,6 +270,7 @@ body {
 
     &-paragraph {
       margin: 0 0 1rem 0;
+      font-size: 0.875rem;//12px but i use 14px, 12 is too small
     }
   }
   
@@ -261,6 +292,83 @@ body {
       width: 1.1rem;
       height: 1rem;
     }
+  }
+
+  &__chart-section {
+    @include flex-vertical-center();
+  }
+
+  &__chart-img {
+    // display: none;
+  }
+
+  &__features {
+    // @include flex-vertical-center();
+  }
+
+  &__each-features {
+    margin-bottom: 1.4rem;
+
+    &-icons {
+      width: 1.25rem;//20px
+      height: 1.125rem;//18px
+    }
+
+    &-heading {
+      // @include clash-font-600();
+      // font-size: 1.125rem;//18px
+      font-size: 1rem;//16px
+      margin: 0.5rem 0;
+      // margin: 0;
+    }
+
+    &-description {
+      font-size: 0.875rem;//14px
+    }
+  }
+
+  &__review {
+    
+    &--trusted {
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 1rem 3rem;
+      font-family: 'Clash Display', sans-serif;
+    }
+
+    &--testimony {
+      text-align: center;
+      margin: 1rem;
+      // display: none;
+    }
+
+    &--each-review {
+      background: #FFFFFF;
+      border: 1px solid #D9D9D9;
+      border-radius: 0 1.25rem 1.25rem 1.25rem;
+      padding: 1.5rem 1rem;
+      margin: 1rem 0;
+      font-size: 0.8rem;
+    }
+
+    &--hero {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      // background-color: red;
+
+      &-img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      &-name {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+
   }
 }
 
@@ -331,6 +439,7 @@ body {
     margin: 2rem 0;
     padding: 0.7rem 1rem;
     border-radius: 0.6rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   }
   
   &--download {

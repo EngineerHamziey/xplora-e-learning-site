@@ -11,10 +11,12 @@ import DustinHan from "./herosImages/DustinHan.png"
 
 const Reviews = () => {
   return (
-    <div>
-      <h5>What Our Clients Say</h5>
-      <p>Trusted by Many Students around the world</p>
-      <p>
+    <div className="home__review">
+      <h5 className="home__heading--five">What Our Clients Say</h5>
+      <p className=" home__heading home__review--trusted">
+        Trusted by Many Students around the world
+        </p>
+      <p className="home__review--testimony">
         Here are testimonies from our users stating why they use our product and why they would recommend it to everyone.
       </p>
       <EachReview  

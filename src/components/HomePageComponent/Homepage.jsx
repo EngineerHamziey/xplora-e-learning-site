@@ -16,7 +16,7 @@ const Homepage = () => {
       <Nav />
       <div className="home__content-not-nav">
         <div className="home__content-not-nav--wrapper">
-          <h1 className="home__heading--one">Learn from the <span className="higlighted">Comfort</span> of Your Home.</h1>
+          <h1 className="home__heading home__heading--one">Learn from the <span className="higlighted">Comfort</span> of Your Home.</h1>
           <p className="home__hero-text">
             Empower your mind with our learning platform. Unlock your potential, gain new skills and explore endless possibilities or personal and professional growth.
           </p>
@@ -32,13 +32,15 @@ const Homepage = () => {
               <img className="home__hero" src={homePageHeroMobile} alt="Picture of a student" />
             </div>
           </div>
-          <h2 className="home__heading--two text-center">Browse Our Popular Subjects</h2>
+          <h2 className="home__heading home__heading--two text-center">Browse Our Popular Subjects</h2>
           <p className="text-center">
             Master new skills in less time with our condensed approach and Learn from industry leaders.
           </p>
           <Courses />
-          <h3 className="home__heading--three text-center">Learning with others makes it more fun.</h3>
-          <img src={theWholeChart} alt="" />
+          <div className="home__chart-section">
+            <h3 className="home__heading home__heading--three text-center">Learning with others makes it more fun.</h3>
+            <img className="home__chart-img" src={theWholeChart} alt="" />
+          </div>
           <Features />
           <Reviews />
           <Footer />
