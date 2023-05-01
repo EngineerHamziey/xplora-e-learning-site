@@ -30,12 +30,12 @@ const Reviews = () => {
           <EachReview userName="Ishaya Bello" img={IshayaBello} />
         </ul>
         <div className="home__review-carousel-btn-wrapper"> 
-          <btn className="home__review-carousel-btn home__review-carousel-btn-left">
+          <button className="home__review-carousel-btn home__review-carousel-btn-left">
             <img src={ArrowRightLeft} alt="" />
-          </btn>
-          <btn href="#" className="home__review-carousel-btn home__review-carousel-btn-right">
+          </button>
+          <button href="#" className="home__review-carousel-btn home__review-carousel-btn-right">
             <img src={ArrowRightLeft} alt="" />
-          </btn>
+          </button>
         </div>
       </div>
     </section> 
