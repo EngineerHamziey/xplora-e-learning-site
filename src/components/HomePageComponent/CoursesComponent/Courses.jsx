@@ -3,7 +3,7 @@ import Btn from "../Btn"
 
 const Courses = () => {
   return (
-    <div className='home__courses'>
+    <section className='home__courses'>
       <EachCourse 
         rating="4.9" 
         courseTitle="Anatomy" 
@@ -20,7 +20,7 @@ const Courses = () => {
         expectation="Learn the  history of government and political systems, the roles and responsibilities of the government, etc."/>
 
       <Btn className="btn--purple btn--get-started" type="link" link="#" text="Get Started — for free" />
-    </div>
+    </section>
   )
 }
 

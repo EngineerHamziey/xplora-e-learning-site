@@ -9,7 +9,7 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <div className="home__features">
+    <section className="home__features">
       <EachFeature 
         logo={barGraphLogo} 
         head ="Leaderboards" 
@@ -30,7 +30,7 @@ const Features = () => {
         head ="Challenge" 
         text="Take up challenges on a daily, weekly and monthly basis to give you a refresher of what you have learned." 
       />
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/clash-display');
 
+
 *,
 *:before,
 *:after {
@@ -7,14 +8,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Aeonik, sans-serif;
-  // display: none;
 }
 
-// Global variables
+
 $primary-purple: #B629E7;
 $light-purple: #F9EAFE;
 $link-font-size: 0.875rem;//14px
 $oc-black: #0C0C0C;
+
 
 @mixin flex-horizontal-center{
   display: flex;
@@ -29,39 +30,31 @@ $oc-black: #0C0C0C;
   align-items: center;
 }
 
-// @mixin clash-font-600 {
-//   font-family: 'Clash Display', sans-serif;
-//   font-weight: 600;
-// }
 
 .text-center {
   text-align: center;
 }
 
 body {
-  background-image: url('./components/images/icons/4doodle4.png');//here goes doodle image
+  background-image: url('./components/images/icons/4doodle4.png');
   background-repeat: repeat;
-  // font-size: $link-font-size;
-  margin-bottom: 10rem;//for visualization
   line-height: 1.5;
   font-size: 0.875;//14px
   color: #757879;
 }
 
+//the root div AKA the ultimate home page wrap
 #root {
   @include flex-vertical-center();
   width: 100%;
-  // background-color: red;
 }
 
 .App {
   margin: 0 0.6rem;
-  // max-width: 500px;
   position: relative;
 }
 
 .nav {
-  // background-color: rgba(240, 220, 220, 0.5);
   display: flex;
   margin: 0.6rem 0 0 0.6rem;
   margin: 0.6rem 0 0 0rem;
@@ -69,8 +62,6 @@ body {
   &__home-logo-wrap {
     @include flex-horizontal-center();
     text-decoration: none;
-    // justify-content: flex-start;//to correct the justify
-    // margin: ;
   }
 
   &__dot-logo {
@@ -101,18 +92,15 @@ body {
   // the divs that makes the hamburgers
   &__hamburgers {
     background-color: $oc-black;
-    
     width: 2rem;
     height: 0.15rem;
     height: 0.23rem;
-
-    // border-radius: .1rem; //not in the design given
     margin: 0;
     transition: all 500ms ease-in-out, color 10s ease-in-out;
     transform: 0;
 
+    //hamburger top piece
     &--top {
-      // margin-bottom: 0.1rem;
 
       &.menu-opened {
         transform: rotate(-100deg) translateY(-63px);
@@ -121,6 +109,7 @@ body {
       }
     }
 
+    //hamburger middle piece
     &--middle{
       margin: 0.3rem auto;
       
@@ -129,8 +118,8 @@ body {
       }
     }
 
+    //hamburger bottom piece
     &--bottom {
-      // margin-top: 0.1rem;
 
       &.menu-opened {
         transform: rotate(45deg) translate(-0.3rem, -0.4rem);
@@ -138,10 +127,8 @@ body {
     }
   }
 
-  //nav__link
+  //the nev link <ul>
   &__link {
-    // display: flex;
-    // @include flex-vertical-center();
     background-color: rgb(13, 175, 175);
     position: fixed;
     top: 0;
@@ -154,6 +141,7 @@ body {
     -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%);
     transition: all 0.5s ease-in-out;
     
+    //nav link <ul> when menu is opened
     &.menu-opened {
       opacity: 1;
       clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
@@ -162,15 +150,16 @@ body {
       visibility: visible;
     }
 
-    //the link btns
+    //the nav link <li>
     &--links {
       list-style-type: none;
     }
 
   }
 }
-// nav ends here
+// the nav bar ends here
 
+//
 .home {
 
   &__content-not-nav {
@@ -328,6 +317,7 @@ body {
   }
 
   &__review {
+    // display: flex;
     
     &--trusted {
       font-size: 1.125rem;
@@ -344,12 +334,15 @@ body {
     }
 
     &--each-review {
+      list-style-type: none;
       background: #FFFFFF;
       border: 1px solid #D9D9D9;
       border-radius: 0 1.25rem 1.25rem 1.25rem;
       padding: 1.5rem 1rem;
       margin: 1rem 0;
       font-size: 0.8rem;
+      position: absolute;
+      inset: 0;//this set top, right, bottom and left to 0
     }
 
     &--hero {
@@ -366,6 +359,46 @@ body {
       &-name {
         margin-left: 1rem;
         font-weight: 600;
+      }
+    }
+
+    &-carousel {
+      // display: none;
+      position: relative;
+      height: 15rem;
+      margin-bottom: 4rem;
+      
+      & > ul {
+        display: flex;
+        position: relative;
+      }
+    
+      &-btn {
+        // background-color: #ddacac;
+        // padding: 0.1rem 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        @include flex-vertical-center();
+
+        &-wrapper { 
+          @include flex-horizontal-center();
+          gap: 3rem;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          right: 50%;
+        }
+        
+        &-right {
+          
+          & > img {
+            // turn the other left arrow to right
+            transform: rotate(180deg);
+          }
+        }
       }
     }
 
