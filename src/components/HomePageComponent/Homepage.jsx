@@ -43,7 +43,6 @@ const Homepage = () => {
           </div>
           <Features />
           <Reviews />
-          <Footer />
         </div>
       </div>
     </>

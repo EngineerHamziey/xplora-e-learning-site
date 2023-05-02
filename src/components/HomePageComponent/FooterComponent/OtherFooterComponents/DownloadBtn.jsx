@@ -2,14 +2,14 @@
 
 const DownloadBtn = ({ src, store }) => {
   return (
-    <button className='btn btn--download'>
-      <div className="btn--download__content">
+    <button className='btn footer__btn--download'>
+      <div className="footer__btn--download-content">
         <div className="btn--download__logo">
           <img src={src} alt="" />
         </div>
         <div className="btn--download__typo">
           <div>Download on</div>
-          <div>{store}</div>
+          <div className="footer__btn--download-store">{store}</div>
         </div>
       </div>
     </button>

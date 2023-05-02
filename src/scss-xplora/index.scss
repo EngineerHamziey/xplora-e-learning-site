@@ -50,7 +50,6 @@ body {
 }
 
 .App {
-  margin: 0 0.6rem;
   position: relative;
 }
 
@@ -164,6 +163,7 @@ body {
 
   &__content-not-nav {
     // display: none;
+    margin: 0 0.6rem;
     @include flex-vertical-center();
 
     &--wrapper {
@@ -461,20 +461,62 @@ body {
     border-radius: 0.6rem;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   }
-  
-  &--download {
-    // display: none;
-    background-color: $oc-black;
-    color: #fff;
-
-    &__content {
-      display: flex;
-    }
-  }
 }
 
 .higlighted {
   color: $primary-purple;
+}
+
+.footer {
+  // @include flex-vertical-center();
+  // align-items: flex-start;
+  background-color: #F2F7FC;
+  padding: 2rem 0.6rem;
+
+  &--home-logo {
+    // background-color: rebeccapurple;
+    margin: 0;
+    justify-content: flex-start;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    & .nav__dot-logo {
+      width: 1.0625rem;
+    }
+
+    & .nav__logo-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__btn--download {
+    border: none;
+    outline: none;
+    // display: none;
+    background-color: $oc-black;
+    color: #fff;
+    padding: 1rem ;
+    border-radius: 0.3rem;
+    font-size: 0.625rem;
+    display: inline-block;
+
+    &-container {
+      // display: none;
+      display: flex;
+      gap: auto;
+    }
+
+    &-store {
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
+    &-content {
+      display: flex;
+      gap: 1rem;
+    }
+  }
 }
 
 

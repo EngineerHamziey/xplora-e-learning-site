@@ -1,5 +1,5 @@
-import React from "react";
 import Homepage from "./components/HomePageComponent/Homepage";
+import Footer from "./components/HomePageComponent/FooterComponent/Footer";
 
 function App() {
   // const users = {
@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Homepage />
+      <Footer />
     </div>
   );
 }
