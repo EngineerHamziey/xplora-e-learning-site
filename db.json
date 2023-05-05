@@ -1,0 +1,14 @@
+
+{
+  "users": [
+    {
+      "name": "Doctors Appointment",
+      "password": "Feb 5th at 02:30pm",
+      "sex": "male",
+      "RegistrationDate": "male",
+      "dateOfBirth": "male",
+      "age": 18,
+      "image": true
+    }
+  ]
+}

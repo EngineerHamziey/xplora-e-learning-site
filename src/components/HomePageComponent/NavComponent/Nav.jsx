@@ -1,7 +1,5 @@
 import NavLinks from "./otherNavComponents/NavLinks";
 import HomeLogo from "../HomeLogo";
-// import hamburger from ".././imagesHome/hamburger.png"
-// import UserMiniDP from "./otherNavComponents/UserMiniDP";
 
 import { useState } from "react";
 
